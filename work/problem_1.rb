@@ -1,4 +1,7 @@
 class Dog
+
+  attr_reader :name
+  
   # initializeメソッド
   def initialize(name)
     @name = name
@@ -11,6 +14,8 @@ class Dog
 end
 
  # initializeメソッドが実行されインスタンス変数を作成している。
- Riku = Dog.new("riku")
+ riku = Dog.new("riku")
  # cryメソッドを呼び出す。
- Riku.cry("わんわん")
+ riku.cry("わんわん")
+ # rikuを表示する
+ riku.name
