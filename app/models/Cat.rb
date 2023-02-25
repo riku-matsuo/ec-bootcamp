@@ -3,7 +3,7 @@ class Cat
   attr_reader :name :birthday
   
   # initializeメソッド
-  def initialize(name, birthday=0)
+  def initialize(name, birthday=nil)
     @name = name
     @birthday = birthday
   end
@@ -22,10 +22,10 @@ end
 
  # initializeメソッドが実行されインスタンス変数を作成している。
  ochi = Cat.new("ochi")
-
- # cryメソッドを呼び出す。
  
+ # cryメソッドを呼び出す。
  ochi.cry("わんわん")
+
  # ochiを表示する
  ochi.name
 
