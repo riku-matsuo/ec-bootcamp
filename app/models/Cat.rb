@@ -1,21 +1,22 @@
 class Cat
 
-  attr_reader :name
+  attr_reader :name :birthday
   
   # initializeメソッド
-  def initialize(name)
+  def initialize(name, birthday=0)
     @name = name
+    @birthday = birthday
+  end
+
+  # birthメソッド(classメソッド)
+  def self.birth(name)
+    birthday = Time.now
+    cat = Cat.new(name, birthday)
   end
 
   # cryメソッド(インスタンスメソッド)
   def cry(sound)
     puts "#{@name}が#{sound}と鳴く。"
-  end
-
-  # birthメソッド(classメソッド)
-  def self.birth(name)
-    cat = Cat.new(name)
-    puts "#{cat.name}が生まれました。"
   end
 end
 
