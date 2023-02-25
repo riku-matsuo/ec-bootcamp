@@ -22,7 +22,9 @@ end
 
  # initializeメソッドが実行されインスタンス変数を作成している。
  ochi = Cat.new("ochi")
+
  # cryメソッドを呼び出す。
+ 
  ochi.cry("わんわん")
  # ochiを表示する
  ochi.name
