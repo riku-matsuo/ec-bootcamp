@@ -1,6 +1,6 @@
 class Cat
 
-  attr_reader :name :birthday
+  attr_reader :name, :birthday
   
   # initializeメソッド
   def initialize(name, birthday=nil)
