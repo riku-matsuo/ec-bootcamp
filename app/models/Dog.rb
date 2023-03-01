@@ -1,21 +1,21 @@
-class Dog
+require './pet'
 
-  attr_reader :name
-  
-  # initializeメソッド
-  def initialize(name)
-    @name = name
-  end
+class Dog < Pet
 
-  # cryメソッド(インスタンスメソッド)
-  def cry(sound)
-    puts "#{@name}が#{sound}と鳴く。"
-  end
+  # # initializeメソッド
+  # def initialize(name)
+  #   super(name)
+  # end
+
+  # # cryメソッド(インスタンスメソッド)
+  # def cry(sound)
+  #   super
+  # end
 end
 
- # initializeメソッドが実行されインスタンス変数を作成している。
- riku = Dog.new("riku")
- # cryメソッドを呼び出す。
- riku.cry("わんわん")
- # rikuを表示する
- riku.name
+# initializeメソッドが実行されインスタンス変数を作成している。
+riku = Dog.new("riku")
+# cryメソッドを呼び出す。
+riku.cry("わんわん")
+# rikuを表示する
+riku.name
