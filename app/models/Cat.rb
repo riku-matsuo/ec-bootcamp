@@ -1,10 +1,10 @@
-class Cat
+class Cat < Pet
 
-  attr_reader :name :birthday
+  attr_reader :birthday
   
   # initializeメソッド
   def initialize(name, birthday=nil)
-    @name = name
+    super(name)
     @birthday = birthday
   end
 
@@ -16,17 +16,17 @@ class Cat
 
   # cryメソッド(インスタンスメソッド)
   def cry(sound)
-    puts "#{@name}が#{sound}と鳴く。"
+    super
   end
 end
 
- # initializeメソッドが実行されインスタンス変数を作成している。
- ochi = Cat.new("ochi")
- 
- # cryメソッドを呼び出す。
- ochi.cry("わんわん")
+# initializeメソッドが実行されインスタンス変数を作成している。
+ochi = Cat.new("ochi")
 
- # ochiを表示する
- ochi.name
+# cryメソッドを呼び出す。
+ochi.cry("わんわん")
 
- Cat.birth("ochi")
+# ochiを表示する
+ochi.name
+
+Cat.birth("ochi")
